@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Timed Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      // Creates a confirm box which takes in true or false, do they need a new password.
+      var confirmPlayQuiz = confirm("Would you like to play a game?");
+    
+      // If the user needs a password (confirmPlayQuiz === true) we run the following code block.
+      if (confirmPlayQuiz) {
+        alert("This is a timed quiz game!")
+        alert("Wrong answers will result in deducting 10 seconds from your timer.")
+        alert("When you are ready to begin, click the Start Quiz button.");
+        }
+    
+      // If the above condition isn't met (confirmPlayQuiz !== true), run the following block of code instead.
+      else {
+        alert("Have a Nice Day!");
+        }
+    </script>
+
+</head>
+  
+<body>
+    <div class="wrapper">
+      <header>
+        <h1>🤓 Coding Quiz 🧐 Challenge 🤓</h1>
+      </header>
+      
+        <div class="card">
+
+            <div class="card-header" id="start">
+                <center><button>Start Quiz</button></center>
+            </div>
+
+            <div class="card-body" id="quiz">
+                <div id="question"> <p> Question </p></div>
+                    <div id="choices">
+                        <button><div class="choice" id="A" onclick="checkAnswer('A')">A</div></button>
+                        <button><div class="choice" id="B" onclick="checkAnswer('B')">B</div></button>
+                        <button><div class="choice" id="C" onclick="checkAnswer('C')">C</div></button>
+                        <button><div class="choice" id="D" onclick="checkAnswer('D')">D</div></button>
+            </div>
+    
+            <div class="card-footer" id="scoreContainer">
+                <div id="timer"></div>
+                <div id="counter"></div>
+                <div id="progress"></div>  
+                <div id="score"></div>    
+            </div> 
+        </div>
+    </div>
+    <script src="jsfile.js"></script>
+  </body>
+
+</html>
